@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Micro Layout Maker</title>
+    <style>
+        body {background-color: lavenderblush;}
+        h1   {font-size:36pt;color: aqua}
+        h2   {color:blue;}
+        p    {margin-left:50px;}
+    </style>
+</head>
+<body>
+    <h1>简单的微雕生成器</h1>
+    <h2>尝试上传md格式的资料吧</h2>
+    <p>
+        <form enctype="multipart/form-data" action="" method="POST">
+	    {% csrf_token %}
+        <input type="file" name="upload" />
+        <br/>
+        <input type="submit" value="上传"/>
+        </form>
+    </p>
+</body>
+</html>
